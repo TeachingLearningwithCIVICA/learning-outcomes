@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<!--
+  CIVICA learning object — Designing Learning Outcomes & Constructive Alignment
+  Author: Dr Mina Sotiriou, European University Institute (Florence School of Transnational Governance)
+  Adapted to the CIVICA frame. Text unchanged. English only, at the author's request;
+  every readable string lives in LANGS.en.
+-->
+<html lang="en" data-theme="light"
+      data-lo-id="civica-tl-learning-outcomes-constructive-alignment"
+      data-lo-author="Mina Sotiriou"
+      data-lo-institution="European University Institute"
+      data-lo-published="2026-09-10"
+      data-lo-languages="en"
+      data-lo-type="faculty-guide"
+      data-lo-licence="CC-BY-NC-SA-4.0"
+      data-lo-audience="teacher"
+      data-lo-topics="learning-outcomes,constructive-alignment,blooms-taxonomy,assessment-design">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>/* Apply the system theme before first paint, so dark-mode readers see no light flash. */
+if (typeof window.matchMedia === "function" && window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";</script>
+<title>Designing Learning Outcomes &amp; Constructive Alignment | Teaching &amp; Learning with CIVICA</title>
+<!-- ===== CIVICA learning object metadata: data-lo-*, <meta>, JSON-LD — keep in sync ===== -->
+<meta name="description" content="From aims to assessment: writing outcomes students can actually achieve, and aligning them with what you teach and how you assess."/>
+<meta name="author" content="Mina Sotiriou"/>
+<meta name="theme-color" content="#244f9d"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Designing Learning Outcomes &amp; Constructive Alignment"/>
+<meta property="og:description" content="From aims to assessment: writing outcomes students can actually achieve, and aligning them with what you teach and how you assess."/>
+<meta property="og:site_name" content="Teaching and Learning with CIVICA"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Designing Learning Outcomes & Constructive Alignment",
+  "description": "From aims to assessment: writing outcomes students can actually achieve, and aligning them with what you teach and how you assess.",
+  "learningResourceType": "faculty-guide",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "teacher"
+  },
+  "teaches": "Writing measurable learning outcomes and aligning them with teaching and assessment",
+  "inLanguage": [
+    "en"
+  ],
+  "datePublished": "2026-09-10",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "author": {
+    "@type": "Person",
+    "name": "Mina Sotiriou",
+    "honorificPrefix": "Dr",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "European University Institute"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CIVICA – The European University of Social Sciences",
+    "url": "https://www.civica.eu/"
+  },
+  "isPartOf": {
+    "@type": "Collection",
+    "name": "Teaching and Learning with CIVICA"
+  },
+  "about": [
+    "Learning outcomes",
+    "Constructive alignment",
+    "Bloom's taxonomy",
+    "Formative and summative assessment"
+  ],
+  "keywords": "learning outcomes, constructive alignment, Biggs, Bloom's taxonomy, SMART outcomes, formative assessment, summative assessment"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-display:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --civica-mark:#244f9d; --civica-rule:rgba(36,79,157,.22); --on-mark:#FFFFFF;
+  /* The author's palette (shared with her other CIVICA guides). One light-mode change, hue kept:
+       --gray400 #888780 -> #777670 for text (3.61 -> 4.56:1 on white) */
+  --purple50:#EEEDFE; --purple800:#3C3489; --teal50:#E1F5EE; --teal800:#085041;
+  --coral50:#FAECE7; --coral800:#712B13; --amber50:#FAEEDA; --amber800:#633806;
+  --gray50:#F1EFE8; --gray400:#777670; --gray800:#2C2C2A;
+  --white:#FFFFFF; --page:#FFFFFF; --ink:#1A1A1A; --body:#3d3d3a; --lead:#4a4a46; --soft:#5a5a56; --border:#E0DED8;
+  --focus:#3C3489;
+  /* label fills carry white text in both themes */
+  --bl-remember:#8B6F1F; --bl-understand:#4E7A3D; --bl-apply:#2E7D82; --bl-analyse:#2E5FA3; --bl-evaluate:#5B4E9E; --bl-create:#8B3F6E;
+  --ck1:#3C3489; --ck2:#085041; --ck3:#712B13; --ck4:#633806; --ck5:#5A5A56;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --civica-mark:#86acda; --civica-rule:rgba(134,172,218,.26); --on-mark:#141413;
+  --purple50:#25224a; --purple800:#bdb7f7; --teal50:#10302a; --teal800:#7fd9bf;
+  --coral50:#35201a; --coral800:#f2ad93; --amber50:#33260f; --amber800:#f0c47a;
+  --gray50:#262523; --gray400:#aeaca5; --gray800:#e4e2dc;
+  --white:#1d1d1b; --page:#141413; --ink:#ecebe7; --body:#d3d1ca; --lead:#c9c7c0; --soft:#b9b7b0; --border:#353431;
+  --focus:#c9c4ff;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+[hidden]{ display:none !important; }
+html{ -webkit-text-size-adjust:100%; }
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+body{ font-family:var(--font-display); color:var(--ink); background:var(--page); line-height:1.55; font-size:17px; -webkit-font-smoothing:antialiased; }
+a{ color:var(--purple800); text-underline-offset:3px; }
+:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:4px; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+/* ---------- CIVICA chrome ---------- */
+.skip-link{ position:absolute; left:12px; top:-4rem; z-index:100; background:var(--civica-mark); color:var(--on-mark); font-weight:700; font-size:15px; padding:11px 18px; border-radius:10px; text-decoration:none; transition:top .2s ease; }
+.skip-link:focus{ top:12px; }
+.civica-bar{ border-bottom:1px solid var(--border); }
+.civica-bar > div{ max-width:900px; margin:0 auto; padding:14px 2rem; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.civica-mark{ display:flex; flex-direction:column; gap:2px; text-decoration:none; line-height:1; }
+/* PLACEHOLDER WORDMARK — the CIVICA logo is set in Movement (licensed, NM Type)
+   and cannot be embedded. Swap for the official transparent SVG when available. */
+.civica-wordmark{ font-weight:900; font-size:18px; letter-spacing:.06em; color:var(--civica-mark); }
+.civica-sub{ font-weight:600; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--gray400); }
+.ctl{ font-family:var(--font-display); font-size:14px; font-weight:700; letter-spacing:.03em; background:transparent; color:var(--ink); border:1.5px solid var(--border); border-radius:999px; padding:9px 15px; cursor:pointer; line-height:1; min-height:36px; }
+.ctl:hover{ border-color:var(--civica-mark); color:var(--civica-mark); }
+.ctl-theme{ display:flex; align-items:center; gap:7px; padding-left:12px; }
+.ctl-theme svg{ width:15px; height:15px; flex-shrink:0; }
+
+/* ---------- the author's layout ---------- */
+.page{ max-width:900px; margin:0 auto; padding:2.5rem 2rem 1.5rem; }
+.masthead{ margin-bottom:2rem; }
+.kicker{ font-size:13px; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:var(--purple800); margin-bottom:6px; }
+h1{ font-size:32px; font-weight:900; color:var(--ink); margin-bottom:8px; line-height:1.2; }
+.subtitle{ font-size:18px; color:var(--gray400); max-width:62ch; }
+h2{ font-size:14px; font-weight:900; text-transform:uppercase; letter-spacing:.07em; color:var(--gray800); margin:2.4rem 0 .9rem; padding-bottom:6px; border-bottom:1px solid var(--border); }
+h3.sub-h{ font-size:16px; font-weight:800; color:var(--ink); margin:1.4rem 0 .5rem; }
+p.lead{ font-size:16px; color:var(--lead); margin-bottom:.9rem; max-width:72ch; }
+p.hint{ font-style:italic; margin-bottom:.5rem; }
+.row3{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.row2{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+@media (max-width:760px){ .row3, .row2{ grid-template-columns:1fr; } }
+.card{ border-radius:12px; padding:1rem 1.1rem; border:1px solid var(--border); }
+.card h3{ font-size:16px; font-weight:800; margin-bottom:6px; line-height:1.35; }
+.card p{ font-size:15px; color:var(--body); }
+.card .q{ font-size:14.5px; color:var(--soft); margin-top:8px; font-style:italic; }
+.bg-purple{ background:var(--purple50); } .fg-purple{ color:var(--purple800); }
+.bg-teal{ background:var(--teal50); } .fg-teal{ color:var(--teal800); }
+.bg-coral{ background:var(--coral50); } .fg-coral{ color:var(--coral800); }
+.bg-amber{ background:var(--amber50); } .fg-amber{ color:var(--amber800); }
+.bg-gray{ background:var(--gray50); }
+.src{ font-size:13.5px; color:var(--gray400); margin-top:6px; }
+/* Bloom's strip: each level is a real button that shows/hides its verb list */
+.bloom-strip{ list-style:none; display:flex; flex-direction:column; gap:6px; }
+.bloom-row{ width:100%; display:grid; grid-template-columns:130px 1fr 1.4fr; border-radius:8px; overflow:hidden; border:1px solid var(--border); background:none; padding:0; font:inherit; color:inherit; text-align:left; cursor:pointer; }
+.bloom-row:focus-visible{ outline-offset:2px; border-radius:8px; }
+.bloom-label{ display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; color:#FFFFFF; padding:.6rem; text-align:center; }
+.bl-remember{ background:var(--bl-remember); } .bl-understand{ background:var(--bl-understand); } .bl-apply{ background:var(--bl-apply); }
+.bl-analyse{ background:var(--bl-analyse); } .bl-evaluate{ background:var(--bl-evaluate); } .bl-create{ background:var(--bl-create); }
+.bloom-def{ padding:.6rem .8rem; font-size:14.5px; color:var(--body); background:var(--white); border-right:1px solid var(--border); display:flex; align-items:center; }
+.bloom-verbs{ padding:.6rem .8rem; font-size:14.5px; color:var(--body); background:var(--gray50); display:flex; align-items:center; flex-wrap:wrap; gap:4px 8px; }
+.bloom-verbs b{ color:var(--ink); }
+.bloom-more{ color:var(--purple800); font-weight:800; white-space:nowrap; }
+.bloom-expand{ background:var(--white); border:1px solid var(--border); border-top:none; border-radius:0 0 8px 8px; padding:.7rem .95rem; font-size:15px; color:var(--body); margin-top:-6px; }
+@media (max-width:640px){
+  .bloom-row{ grid-template-columns:1fr; }
+  .bloom-label{ justify-content:flex-start; } .bloom-def{ border-right:0; border-bottom:1px solid var(--border); }
+}
+.table-wrap{ overflow-x:auto; }
+table.measure{ width:100%; border-collapse:collapse; font-size:15px; min-width:420px; }
+table.measure th{ text-align:left; font-size:13px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; padding:9px 11px; }
+table.measure td{ padding:9px 11px; border-top:1px solid var(--border); vertical-align:top; }
+table.measure .hard{ background:var(--coral50); } table.measure .easy{ background:var(--teal50); }
+table.measure th.hard{ color:var(--coral800); } table.measure th.easy{ color:var(--teal800); }
+dl.smart{ margin:0; }
+.smart-row{ display:grid; grid-template-columns:110px 1fr; gap:10px; padding:8px 0; border-top:1px solid var(--border); }
+.smart-row:first-child{ border-top:none; }
+.smart-row dt{ font-weight:800; font-size:15.5px; color:var(--amber800); }
+.smart-row dd{ font-size:15.5px; color:var(--body); margin:0; }
+.ex-item{ border-radius:10px; padding:.85rem 1rem; border:1px solid var(--border); margin-bottom:8px; }
+.ex-item .verdict{ font-size:13px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; margin-bottom:3px; }
+.ex-item .text{ font-size:16px; margin-bottom:3px; }
+.ex-item .why{ font-size:15px; color:var(--soft); }
+.cycle-wrap{ list-style:none; display:flex; align-items:stretch; justify-content:space-between; gap:8px; margin:.4rem 0 1rem; }
+.cycle-node{ flex:1; text-align:center; border-radius:12px; padding:.95rem .7rem; border:1px solid var(--border); }
+.cycle-node h3{ font-size:16px; font-weight:800; margin-bottom:4px; }
+.cycle-node p{ font-size:14.5px; color:var(--body); }
+.cycle-arrow{ font-size:22px; color:var(--gray400); flex-shrink:0; align-self:center; }
+@media (max-width:640px){ .cycle-wrap{ flex-direction:column; } .cycle-arrow{ transform:rotate(90deg); } }
+/* checklist: native checkboxes */
+#checklist-progress{ font-size:15px; font-weight:700; color:var(--gray400); margin-bottom:10px; }
+.checklist{ list-style:none; display:flex; flex-direction:column; gap:8px; }
+.check-row{ display:grid; grid-template-columns:110px 1fr; gap:12px; align-items:center; border-radius:10px; overflow:hidden; border:1px solid var(--border); cursor:pointer; }
+.check-key{ padding:.7rem .8rem; font-weight:800; font-size:15.5px; color:#FFFFFF; display:flex; align-items:center; justify-content:center; gap:8px; align-self:stretch; }
+.check-key input{ width:18px; height:18px; accent-color:#FFFFFF; flex-shrink:0; cursor:pointer; }
+.check-key input:focus-visible{ outline:3px solid #FFFFFF; outline-offset:2px; }
+.check-val{ padding:.7rem .8rem .7rem 0; font-size:15.5px; color:var(--body); }
+.check-row:has(input:checked) .check-val{ color:var(--gray400); }
+.ck1{ background:var(--ck1); } .ck2{ background:var(--ck2); } .ck3{ background:var(--ck3); } .ck4{ background:var(--ck4); } .ck5{ background:var(--ck5); }
+@media (max-width:520px){ .check-row{ grid-template-columns:96px 1fr; } }
+ol.reflist, ul.furtherlist{ padding-left:22px; font-size:15px; color:var(--body); }
+ol.reflist li, ul.furtherlist li{ margin-bottom:7px; line-height:1.55; }
+.footer{ margin-top:2.5rem; padding-top:24px; border-top:1px solid var(--border); }
+.citation{ font-size:14px; font-style:italic; color:var(--lead); margin:0 0 4px; line-height:1.6; }
+/* ---------- CIVICA attribution ---------- */
+.attribution{ margin-top:1.4rem; padding-top:1.2rem; border-top:1.5px solid var(--civica-rule); display:grid; gap:.45rem; font-size:14px; color:var(--ink); }
+.attr-value{ flex:1 1 18rem; min-width:0; }
+.attr-line{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.2rem .55rem; margin:0; }
+.attr-label{ font-weight:900; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--civica-mark); flex:0 0 7.5rem; }
+.attribution a{ color:var(--ink); text-decoration-color:var(--civica-rule); }
+.attr-role{ color:var(--gray400); font-size:13px; }
+.attr-funding{ margin:.5rem 0 0; font-size:13px; color:var(--gray400); }
+@media (max-width:600px){ .page{ padding:1.8rem 1rem 1.5rem; } .civica-bar > div{ padding:14px 1rem; } h1{ font-size:26px; } .attr-label{ flex:1 0 100%; } .civica-sub{ display:none; } }
+@media print{ .civica-bar, .skip-link, .bloom-more, p.hint{ display:none !important; } body{ background:#fff; color:#000; } .card, .ex-item, .check-row, .bloom-row{ break-inside:avoid; } }
+
+p.lead.mt-sm{ margin-top:.8rem; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" id="t-skip"></a>
+<div class="civica-bar">
+  <div>
+    <!-- PLACEHOLDER: swap for the official transparent CIVICA SVG if available. -->
+    <a class="civica-mark" href="https://www.civica.eu/" target="_blank" rel="noopener noreferrer" id="t-mark">
+      <span class="civica-wordmark" aria-hidden="true">CIVICA</span>
+      <span class="civica-sub" id="t-mark-sub" aria-hidden="true"></span>
+    </a>
+    <button type="button" class="ctl ctl-theme" id="theme-btn" aria-pressed="false">
+      <span id="theme-icon" aria-hidden="true"></span><span id="theme-label"></span>
+    </button>
+  </div>
+</div>
+<main class="page" id="main">
+  <header class="masthead">
+    <p class="kicker" data-k="kicker"></p>
+    <h1 data-k="title"></h1>
+    <p class="subtitle" data-k="subtitle"></p>
+  </header>
+
+  <h2 data-k="aimsH"></h2>
+  <div class="row3" id="aims"></div>
+  <p class="src" data-k="aimsSrc"></p>
+
+  <h2 data-k="whyH"></h2>
+  <div class="row3" id="why"></div>
+
+  <h2 data-k="bloomH"></h2>
+  <p class="lead" data-k="bloomLead"></p>
+  <p class="lead hint" data-k="bloomHint"></p>
+  <ul class="bloom-strip" id="bloom-strip"></ul>
+  <p class="src" data-k="bloomSrc"></p>
+
+  <h2 data-k="measureH"></h2>
+  <div class="table-wrap">
+    <table class="measure">
+      <thead><tr><th scope="col" class="hard" data-k="measureHard"></th><th scope="col" class="easy" data-k="measureEasy"></th></tr></thead>
+      <tbody id="measure"></tbody>
+    </table>
+  </div>
+
+  <h2 data-k="smartH"></h2>
+  <dl class="smart" id="smart"></dl>
+  <p class="src" data-k="smartSrc"></p>
+
+  <h2 data-k="exH"></h2>
+  <div id="ex"></div>
+
+  <h2 data-k="alignH"></h2>
+  <p class="lead" data-k="alignLead"></p>
+  <ol class="cycle-wrap" id="cycle"></ol>
+  <p class="src" data-k="alignSrc"></p>
+
+  <h3 class="sub-h" data-k="fsH"></h3>
+  <p class="lead" data-k="fsLead"></p>
+  <div class="row2" id="fs"></div>
+  <p class="lead mt-sm" data-k="fsAfter"></p>
+
+  <h3 class="sub-h" data-k="aiH"></h3>
+  <p class="lead" data-k="aiLead"></p>
+  <div class="row2" id="ai"></div>
+
+  <h2 data-k="checkH"></h2>
+  <p id="checklist-progress" aria-live="polite"></p>
+  <ul class="checklist" id="checklist"></ul>
+
+  <h2 data-k="refsH"></h2>
+  <ol class="reflist" id="refs"></ol>
+
+  <h2 data-k="furtherH"></h2>
+  <ul class="furtherlist" id="further"></ul>
+
+  <footer class="footer">
+    <p class="citation" id="t-cite"></p>
+    <!-- ===== CIVICA attribution — mirrors the JSON-LD in <head> ===== -->
+    <div class="attribution">
+      <p class="attr-line"><span class="attr-label" id="t-lbl-author"></span>
+        <span class="attr-value">Dr Mina Sotiriou <span class="attr-role">European University Institute, Florence School of Transnational Governance</span></span></p>
+      <p class="attr-line"><span class="attr-label" id="t-lbl-published"></span><time id="published-date"></time></p>
+      <p class="attr-line"><span class="attr-label" id="t-lbl-part"></span>
+        <a href="https://www.civica.eu/" target="_blank" rel="noopener noreferrer">Teaching and Learning with CIVICA</a></p>
+      <p class="attr-line"><span class="attr-label" id="t-lbl-licence"></span><span id="t-licence" class="attr-value"></span></p>
+      <p class="attr-funding" id="t-funding"></p>
+    </div>
+  </footer>
+</main>
+<p class="sr-only" aria-live="polite" id="live"></p>
+<script>
+(function(){
+const PUBLISHED = "2026-09-10";
+const LICENCE_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
+const LICENCE_NAME = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)";
+/* ===== Language pack — English only, at the author's request (her text, verbatim). ===== */
+const LANGS = window.LANGS = {}; LANGS.en = {
+ "docTitle": "Designing Learning Outcomes & Constructive Alignment | Teaching & Learning with CIVICA",
+ "kicker": "Curriculum Design · Faculty Guide",
+ "title": "Designing Learning Outcomes & Constructive Alignment",
+ "subtitle": "From aims to assessment: writing outcomes students can actually achieve, and aligning them with what you teach and how you assess.",
+ "aimsH": "Aims, objectives, outcomes: the difference",
+ "aims": [
+  [
+   "Aims",
+   "A description of the overall goals or purpose of a piece of learning: a \"mission statement\" for the course.",
+   "What are the main benefits for learners?"
+  ],
+  [
+   "Objectives",
+   "The operational aspects of teaching and learning in more detail, written from the perspective of the educator.",
+   "What are learners going to be doing? What kinds of activities will they engage in?"
+  ],
+  [
+   "Outcomes",
+   "Concise statements of how learners will demonstrate the intended learning by the end of a programme or module.",
+   "What new knowledge or skills will learners gain, and what will they be able to do with it?"
+  ]
+ ],
+ "aimsSrc": "Imperial College London, Educational Development Unit. Aims, Objectives, Outcomes: What's the Difference.",
+ "whyH": "Why learning outcomes matter",
+ "why": [
+  [
+   "Institutions",
+   "Increase transparency and comparability between qualification standards."
+  ],
+  [
+   "Instructors",
+   "Plan appropriate teaching strategies, materials and assessments; assess how a course's outcomes align with programme outcomes."
+  ],
+  [
+   "Learners",
+   "Anticipate what they will gain from the educational experience and identify what they need to do to succeed in the course."
+  ]
+ ],
+ "bloomH": "Bloom's revised taxonomy",
+ "bloomLead": "Pitch outcomes at the cognitive level the course actually requires. For postgraduate work, aim for the top three tiers (analyse, evaluate, create) rather than settling in recall and comprehension.",
+ "bloomHint": "Click any level to see the full verb list.",
+ "moreVerbs": "+ more verbs",
+ "hideVerbs": "– hide",
+ "bloom": [
+  [
+   "remember",
+   "Remember",
+   "Recall facts, terms, basic concepts and answers.",
+   "choose · define · label · list · match",
+   "Choose · Define · Find · Label · List · Match · Name · Omit · Recall · Relate · Select · Show · Spell · Tell"
+  ],
+  [
+   "understand",
+   "Understand",
+   "Explain ideas or concepts in one's own words.",
+   "classify · compare · demonstrate · explain",
+   "Classify · Compare · Contrast · Demonstrate · Explain · Extend · Illustrate · Infer · Interpret · Outline · Relate · Rephrase · Show · Summarise · Translate"
+  ],
+  [
+   "apply",
+   "Apply",
+   "Use information in a new situation.",
+   "apply · build · choose · construct",
+   "Apply · Build · Choose · Construct · Develop · Experiment with · Identify · Interview · Make use of · Model · Organise · Plan · Select · Solve · Utilise"
+  ],
+  [
+   "analyse",
+   "Analyse",
+   "Draw connections among ideas; examine and break information into parts.",
+   "analyse · categorise · classify · compare",
+   "Analyse · Assume · Categorise · Classify · Compare · Conclude · Contrast · Discover · Dissect · Distinguish · Divide · Examine · Infer · Inspect"
+  ],
+  [
+   "evaluate",
+   "Evaluate",
+   "Justify a stand or decision; present and defend opinions by making judgements.",
+   "agree · appraise · assess · award",
+   "Agree · Appraise · Assess · Award · Choose · Compare · Conclude · Criticize · Decide · Deduce · Defend · Determine · Disprove · Estimate"
+  ],
+  [
+   "create",
+   "Create",
+   "Compile information in a new way; propose alternative solutions.",
+   "adapt · build · change · choose",
+   "Adapt · Build · Change · Choose · Combine · Compile · Compose · Construct · Create · Delete · Design · Develop · Discuss · Elaborate · Estimate"
+  ]
+ ],
+ "bloomSrc": "Anderson, L. and Krathwohl, D. (eds.) 2001. *A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives.* New York: Longman.",
+ "measureH": "Writing outcomes that can be measured",
+ "measureHard": "Very hard to measure",
+ "measureEasy": "Easy to measure",
+ "measure": [
+  [
+   "Appreciate different types of global migration",
+   "Identify and analyse different types of global migration data, indicators and repositories"
+  ],
+  [
+   "Have more confidence in their abilities",
+   "Demonstrate the ability to analyse and respond to arguments about racial discrimination"
+  ],
+  [
+   "Words like: *understand, be familiar with, gain knowledge of*",
+   "Use instead: *describe, explain, distinguish between*"
+  ]
+ ],
+ "smartH": "Creating SMART learning outcomes",
+ "smart": [
+  [
+   "Specific",
+   "Clear and distinct from others: what do I want students to be able to do or achieve?"
+  ],
+  [
+   "Measurable",
+   "Uses verbs that make observable student action: how will I know if students achieved this outcome?"
+  ],
+  [
+   "Attainable",
+   "Realistically challenging for students in the class, given their background and stage."
+  ],
+  [
+   "Related",
+   "Likely to be achieved and kept students on track within this learning outcome and the course."
+  ],
+  [
+   "Time-bound",
+   "How long will it take students to achieve this outcome? Are you allowing enough time?"
+  ]
+ ],
+ "smartSrc": "SMART Guidelines, Stanford University, Center for Teaching and Learning (2020).",
+ "exH": "Learning outcomes: worked examples",
+ "ex": [
+  [
+   "coral",
+   "Not an outcome",
+   "\"Be given opportunities to learn effective communication skills\"",
+   "Describes programme content, not the attributes of successful students."
+  ],
+  [
+   "amber",
+   "Vague",
+   "\"Have a deeper appreciation for good communication practices\"",
+   "Does not start with an action verb or define the level of learning; the subject has no context and is not specific."
+  ],
+  [
+   "teal",
+   "Specific",
+   "\"Communicate effectively in a professional environment through technical reports and presentations\"",
+   "Starts with an action verb that defines the level of learning; provides context so the outcome is specific and measurable."
+  ]
+ ],
+ "alignH": "Constructive alignment (Biggs' model)",
+ "alignLead": "Once the intended learning outcomes are articulated, the assessment criteria are derived from them, and the teacher designs learning activities aimed at achieving the outcome and matching the assessment criteria.",
+ "cycle": [
+  [
+   "purple",
+   "Learning outcomes",
+   "Measurable outcomes are articulated first"
+  ],
+  [
+   "teal",
+   "Assessment methods",
+   "Assessment criteria are derived from the outcomes"
+  ],
+  [
+   "coral",
+   "Teaching & learning activities",
+   "Designed to reach the outcome and match the assessment criteria"
+  ]
+ ],
+ "alignSrc": "Using Biggs' Model of Constructive Alignment in Curriculum Design, Open Educational Resources of UCD Teaching and Learning, University College Dublin.",
+ "fsH": "Formative and summative: one feeds the other",
+ "fsLead": "Alignment isn't only about matching outcomes to assessment types; it's about sequencing them so formative work builds the capability that summative work then certifies. Treated as separate, disconnected events, formative tasks become box-ticking and summative tasks become high-stakes surprises. Treated as a chain, each formative task is feed-forward for the next: students get low-stakes practice, feedback, and a chance to close the gap before anything counts.",
+ "fs": [
+  [
+   "teal",
+   "Formative",
+   "Low-stakes, frequent, feedback-rich. Purpose is to surface gaps early and give students something to act on, not to grade performance. Should map onto the same outcome(s) the summative task will later assess, so the practice is genuine rehearsal, not a tangent."
+  ],
+  [
+   "coral",
+   "Summative",
+   "Higher-stakes, certifies achievement of the outcome. Works best when students arrive at it having already had a formative attempt, feedback on it, and time to apply that feedback, so the summative task should feel familiar in form, not be the first time students have tried the skill."
+  ]
+ ],
+ "fsAfter": "In practice this means designing backwards from the summative task: identify the skill it demands, then build a formative task earlier in the course that rehearses exactly that skill, with feedback timed so students can still use it.",
+ "aiH": "The AI dimension",
+ "aiLead": "Generative AI changes what formative and summative assessment need to do for each other. If a formative task can be fully completed by AI, it stops rehearsing anything, and students arrive at the summative task no more prepared than if the formative step hadn't existed. Two design implications follow:",
+ "ai": [
+  [
+   "purple",
+   "Make formative tasks worth doing without AI",
+   "Build in what AI can't easily produce: in-class response, a live discussion, a draft built on data, or a case introduced that session, so the practice is real practice, and the feedback students get is feedback on their own thinking."
+  ],
+  [
+   "purple",
+   "Let formative be where AI use is taught, not policed",
+   "Lower stakes make formative tasks the right place for students to learn legitimate AI use: brainstorming, feedback on a draft, checking reasoning, before summative tasks apply stricter constraints or AI-resistant formats."
+  ]
+ ],
+ "checkH": "Checklist for designing your outcomes",
+ "checkProgress": "{n} of {t} checked",
+ "check": [
+  [
+   "ck1",
+   "Ask",
+   "yourself what's the most important things a learner should know, be able to do, or value after completing the course/programme. Remember: it is not what they will \"do\" in the course."
+  ],
+  [
+   "ck2",
+   "Use",
+   "an action verb: see Bloom's Taxonomy."
+  ],
+  [
+   "ck3",
+   "Draft",
+   "a list of possible learning outcomes. Consider what is possible for learners to accomplish in your course. Only keep the most essential learning outcomes."
+  ],
+  [
+   "ck4",
+   "Map",
+   "course learning outcomes with assessments to ensure they are covered adequately."
+  ],
+  [
+   "ck5",
+   "Ensure",
+   "learners have enough time to practise skills and apply their new knowledge before they are assessed on it."
+  ]
+ ],
+ "refsH": "References",
+ "refs": [
+  "Imperial College London, Educational Development Unit. *Aims, Objectives, Outcomes: What's the Difference.* Teaching Toolkit.",
+  "Anderson, L. and Krathwohl, D. (eds.) 2001. *A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives.* New York: Longman.",
+  "SMART Guidelines, Stanford University, Center for Teaching and Learning (2020).",
+  "Using Biggs' Model of Constructive Alignment in Curriculum Design, Open Educational Resources of UCD Teaching and Learning, University College Dublin."
+ ],
+ "furtherH": "Further reading",
+ "further": [
+  [
+   "University of Cambridge, Centre for Teaching and Learning. ",
+   "Aligning Assessment with Teaching and Learning",
+   "https://www.cctl.cam.ac.uk/files/foundations_for_assessment_paper_2.pdf",
+   "."
+  ],
+  [
+   "Imperial College London, Educational Development Unit. ",
+   "ILOs and Constructive Alignment",
+   "https://www.imperial.ac.uk/staff/educational-development/teaching-toolkit/intended-learning-outcomes/ilos-and-constructive-alignment/",
+   "."
+  ],
+  [
+   "Durham University, Digital and Curriculum Academic Development (DCAD). ",
+   "Constructive Alignment",
+   "https://dcad-resourcebank.webspace.durham.ac.uk/2024/01/25/constructive-alignment/",
+   " resource bank."
+  ],
+  [
+   "Queen Mary Academy. ",
+   "Constructive Alignment",
+   "https://www.qmul.ac.uk/queenmaryacademy/educators/resources/curriculum-design/constructive-alignment/",
+   " curriculum design resource."
+  ],
+  [
+   "University of Reading, CQSD. ",
+   "Focus On: Formative Assessment & Feedback",
+   "https://www.reading.ac.uk/cqsd/-/media/project/functions/cqsd/documents/ade/tandl-resources/prp-formative-assessment-and-feedback.pdf",
+   "."
+  ]
+ ],
+ "citation": "Suggested citation: Sotiriou, M. (2026). Designing Learning Outcomes & Constructive Alignment. EUI Florence School of Transnational Governance. Teaching & Learning with CIVICA.",
+ "developed": "Developed by Dr Mina Sotiriou, EUI – Florence School of Transnational Governance, using Claude (Anthropic), 2026.",
+ "pdf": " (PDF)",
+ "skip": "Skip to content",
+ "markLabel": "CIVICA — Teaching and Learning (opens in a new tab)",
+ "markSub": "Teaching & Learning",
+ "themeToDark": "Dark",
+ "themeToLight": "Light",
+ "themeToDarkLabel": "Switch to dark mode",
+ "themeToLightLabel": "Switch to light mode",
+ "newTab": " (opens in a new tab)",
+ "lblAuthor": "Author",
+ "lblPublished": "Published",
+ "lblPart": "Part of",
+ "lblLicence": "Licence",
+ "licence": "This work is licensed under {link}, except where otherwise noted.",
+ "funding": "Co-funded by the European Union"
+};
+const T = LANGS.en;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const rich = s => esc(s).replace(/\*(.+?)\*/g,"<em>$1</em>");
+const fill = (s, v) => s.replace(/\{(\w+)\}/g, (_, k) => v[k]);
+const ext = (href, text) => `<a href="${href}" target="_blank" rel="noopener noreferrer">${esc(text)}${/\.pdf$/i.test(href) ? `<span class="sr-only">${esc(T.pdf)}</span>` : ""}<span class="sr-only">${esc(T.newTab)}</span></a>`;
+const COL = ["purple","teal","coral"];
+
+document.title = T.docTitle;
+document.querySelectorAll("[data-k]").forEach(el => { el.innerHTML = rich(T[el.dataset.k]); });
+$("aims").innerHTML = T.aims.map(([h, p, q], i) => `<div class="card bg-${COL[i]}"><h3 class="fg-${COL[i]}">${esc(h)}</h3><p>${esc(p)}</p><p class="q">${esc(q)}</p></div>`).join("");
+$("why").innerHTML = T.why.map(([h, p]) => `<div class="card bg-gray"><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join("");
+
+/* Bloom's levels: real buttons with aria-expanded (were clickable boxes, unreachable by keyboard) */
+$("bloom-strip").innerHTML = T.bloom.map(([id, label, def, verbs, all]) => `
+  <li>
+    <button type="button" class="bloom-row" aria-expanded="false" aria-controls="bv-${id}" id="bb-${id}">
+      <span class="bloom-label bl-${id}">${esc(label)}</span>
+      <span class="bloom-def">${esc(def)}</span>
+      <span class="bloom-verbs"><b>${esc(verbs)}</b><span class="bloom-more" aria-hidden="true">${esc(T.moreVerbs)}</span></span>
+    </button>
+    <div class="bloom-expand" id="bv-${id}" role="region" aria-labelledby="bb-${id}" hidden>${esc(all)}</div>
+  </li>`).join("");
+document.querySelectorAll(".bloom-row").forEach(btn => btn.addEventListener("click", () => {
+  const open = btn.getAttribute("aria-expanded") !== "true";
+  btn.setAttribute("aria-expanded", String(open));
+  $(btn.getAttribute("aria-controls")).hidden = !open;
+  btn.querySelector(".bloom-more").textContent = open ? T.hideVerbs : T.moreVerbs;
+}));
+
+$("measure").innerHTML = T.measure.map(([h, e]) => `<tr><td class="hard">${rich(h)}</td><td class="easy">${rich(e)}</td></tr>`).join("");
+$("smart").innerHTML = T.smart.map(([k, v]) => `<div class="smart-row"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+$("ex").innerHTML = T.ex.map(([c, v, t, w]) => `<div class="ex-item bg-${c}"><p class="verdict fg-${c}">${esc(v)}</p><p class="text">${esc(t)}</p><p class="why">${esc(w)}</p></div>`).join("");
+$("cycle").innerHTML = T.cycle.map(([c, h, p], i) => `${i ? '<li class="cycle-arrow" aria-hidden="true">→</li>' : ""}<li class="cycle-node bg-${c}"><h3 class="fg-${c}">${esc(h)}</h3><p>${esc(p)}</p></li>`).join("");
+$("fs").innerHTML = T.fs.map(([c, h, p]) => `<div class="card bg-${c}"><h3 class="fg-${c}">${esc(h)}</h3><p>${esc(p)}</p></div>`).join("");
+$("ai").innerHTML = T.ai.map(([c, h, p]) => `<div class="card bg-${c}"><h3 class="fg-${c}">${esc(h)}</h3><p>${esc(p)}</p></div>`).join("");
+
+/* Checklist: native checkboxes (were clickable boxes with ☐/☑ characters) */
+$("checklist").innerHTML = T.check.map(([id, key, val]) => `
+  <li><label class="check-row" for="${id}">
+    <span class="check-key ${id}"><input type="checkbox" id="${id}">${esc(key)}</span>
+    <span class="check-val">${esc(val)}</span>
+  </label></li>`).join("");
+const boxes = [...document.querySelectorAll("#checklist input")];
+const updateProgress = () => { $("checklist-progress").textContent = fill(T.checkProgress, { n: boxes.filter(b => b.checked).length, t: boxes.length }); };
+boxes.forEach(b => b.addEventListener("change", updateProgress)); updateProgress();
+
+$("refs").innerHTML = T.refs.map(r => `<li>${rich(r)}</li>`).join("");
+$("further").innerHTML = T.further.map(([a, t, h, z]) => `<li>${esc(a)}${ext(h, t)}${esc(z)}</li>`).join("");
+$("t-cite").innerHTML = esc(T.citation) + "<br>\n" + esc(T.developed);
+
+/* ===== CIVICA frame ===== */
+$("t-skip").textContent = T.skip; $("t-mark").setAttribute("aria-label", T.markLabel); $("t-mark-sub").textContent = T.markSub;
+document.querySelectorAll('.attribution a[target="_blank"]').forEach(a => { const sp = document.createElement("span"); sp.className = "sr-only"; sp.textContent = T.newTab; a.appendChild(sp); });
+$("t-lbl-author").textContent = T.lblAuthor; $("t-lbl-published").textContent = T.lblPublished;
+$("t-lbl-part").textContent = T.lblPart; $("t-lbl-licence").textContent = T.lblLicence; $("t-funding").textContent = T.funding;
+$("t-licence").innerHTML = esc(T.licence).replace("{link}", '<a href="' + LICENCE_URL + '" target="_blank" rel="noopener noreferrer license">' + esc(LICENCE_NAME) + '<span class="sr-only">' + esc(T.newTab) + '</span></a>');
+const pd = $("published-date"); pd.setAttribute("datetime", PUBLISHED);
+pd.textContent = new Intl.DateTimeFormat("en-GB", { day:"numeric", month:"long", year:"numeric", timeZone:"UTC" }).format(new Date(PUBLISHED + "T12:00:00Z"));
+const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>';
+const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1z"/></svg>';
+function updateThemeButton(){
+  const dark = document.documentElement.dataset.theme === "dark";
+  $("theme-icon").innerHTML = dark ? SUN : MOON;
+  $("theme-label").textContent = dark ? T.themeToLight : T.themeToDark;
+  $("theme-btn").setAttribute("aria-pressed", String(dark));
+  $("theme-btn").setAttribute("aria-label", dark ? T.themeToLightLabel : T.themeToDarkLabel);
+}
+$("theme-btn").addEventListener("click", () => {
+  document.documentElement.dataset.theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  updateThemeButton();
+});
+updateThemeButton();
+})();
+</script>
+</body>
+</html>
